@@ -31,7 +31,6 @@ body > svg {
     }
 
     .search-location {
-        /* revoir couleur bouton au survol (voir maquette) */
         background-color: #eaeaea;
         display: flex;
         flex-wrap: nowrap;
@@ -91,8 +90,11 @@ body > svg {
                     font-size: 24px;
                     font-family: "Roboto";
                     font-weight: 700;
-                    color: #000;
                     padding: 40px 58px 0 42px;
+
+                    @media (min-width: $breakPointL) {
+                        font-size: 40px;
+                    }
                 }
 
                 .light {
@@ -321,7 +323,7 @@ body > svg {
                             cursor: pointer;
                         }
 
-                        &:active {
+                        &:hover {
                             svg {
                                 fill: url(#heart-gradient);
                                 stroke: url(#heart-gradient);

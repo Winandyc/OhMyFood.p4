@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+}
+
+.cards {
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-name: appear;
+}
+.cards.delay0 {
+  animation-delay: 0s;
+}
+.cards.delay1 {
+  animation-delay: 1s;
+}
+.cards.delay2 {
+  animation-delay: 2s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    left: 34px;
+  }
+  75% {
+    opacity: 0;
+    left: 34px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+body > svg {
+  width: 0;
+  height: 0;
+  position: fixed;
+}
+
+.main-container {
+  background-color: #f6f6f6;
+}
+.main-container a {
+  text-decoration: none;
+}
+.main-container .header-content {
+  background-color: inherit;
+  display: grid;
+  grid-template-columns: 64px 1fr 64px;
+  align-items: center;
+  justify-items: center;
+  height: 64px;
+}
+.main-container .header-content .arrow-icon {
+  color: #000;
+  font-size: 30px;
+}
+.main-container .header-content .header-title {
+  color: #000000;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  font-weight: 400;
+}
+.main-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 275px;
+}
+.main-container .second-conteiner {
+  background-color: #f6f6f6;
+  border-radius: 25px 25px 0 0;
+  position: relative;
+  bottom: 60px;
+  margin-bottom: -20px;
+}
+@media (min-width: 1024px) {
+  .main-container .second-conteiner {
+    margin: 0 184px;
+  }
+}
+.main-container .second-conteiner main {
+  display: grid;
+  gap: 40px;
+}
+.main-container .second-conteiner main .conteiner-title {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .main-container .second-conteiner main .conteiner-title {
+    justify-content: center;
+  }
+}
+.main-container .second-conteiner main .conteiner-title .main-title {
+  display: flex;
+  padding-top: 32px;
+  padding-left: 17px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .main-container .second-conteiner main .conteiner-title .main-title {
+    gap: 30px;
+    padding-top: 32px;
+  }
+}
+.main-container .second-conteiner main .conteiner-title .main-title h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+}
+.main-container .second-conteiner main .conteiner-title .main-title svg {
+  stroke: #000;
+  stroke-width: 1px;
+  fill: #fff;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 42px;
+  cursor: pointer;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .main-container .second-conteiner main .conteiner-title .main-title svg {
+    right: 22px;
+  }
+}
+.main-container .second-conteiner main .conteiner-title .main-title .heart-icons svg {
+  stroke: #000;
+  stroke-width: 1px;
+  fill: #fff;
+  transition: all 0.3s;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  bottom: 31px;
+  right: 22px;
+  cursor: pointer;
+}
+.main-container .second-conteiner main .conteiner-title .main-title .heart-icons:hover svg {
+  fill: url(#heart-gradient);
+  stroke: url(#heart-gradient);
+}
+@keyframes fillHeart {
+  to {
+    background-position: -100% 0;
+  }
+}
+.main-container .second-conteiner main .all-cards {
+  display: grid;
+  gap: 40px;
+  padding: 0 15px;
+}
+@media (min-width: 1024px) {
+  .main-container .second-conteiner main .all-cards {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+  }
+}
+.main-container .second-conteiner main .all-cards .menu-validation {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+}
+.main-container .second-conteiner main .all-cards .menu-validation .menu-wrapIcon {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.main-container .second-conteiner main .all-cards .menu-validation .menu-wrapIcon .menuItem__icon {
+  color: #99e2d0;
+}
+.main-container .second-conteiner main .all-cards h2 {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  position: relative;
+}
+.main-container .second-conteiner main .all-cards h2::after {
+  content: "";
+  background-color: #99e2d0;
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  top: 25px;
+  left: 0px;
+}
+.main-container .second-conteiner main .all-cards .meal-item {
+  position: relative;
+  height: 69px;
+  margin-top: 12px;
+  background: white;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .main-container .second-conteiner main .all-cards .meal-item {
+    width: 50vw;
+  }
+}
+.main-container .second-conteiner main .all-cards .meal-item:hover .meal-item-animate {
+  right: 0px;
+}
+.main-container .second-conteiner main .all-cards .meal-item-animate {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: -59px;
+  bottom: 0px;
+  display: flex;
+  transition: right 0.3s;
+}
+.main-container .second-conteiner main .all-cards .meal-content {
+  min-width: 0px;
+  flex-grow: 1;
+  padding: 13px 15px 13px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .second-conteiner main .all-cards .meal-content .title {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-container .second-conteiner main .all-cards .meal-content .addendum-and-price {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15.0431px;
+  line-height: 18px;
+}
+.main-container .second-conteiner main .all-cards .meal-item .addendum {
+  font-weight: 300;
+  font-family: "Roboto";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 5px;
+}
+.main-container .second-conteiner main .all-cards .meal-item .price {
+  font-weight: 700;
+  font-family: "Roboto";
+}
+.main-container .second-conteiner main .all-cards .select-button {
+  width: 59px;
+  background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .second-conteiner main .all-cards .select-button .icon {
+  padding: 3px 3px 3px 3px;
+  font-size: 14px;
+  color: #99e2d0;
+  background-color: white;
+  border-radius: 50px;
+}
+.main-container .second-conteiner main .link-search-div {
+  display: flex;
+  justify-content: center;
+}
+.main-container .second-conteiner main .link-search-div .link-search {
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: white;
+  padding: 13px 19px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 148px;
+  height: 24px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main-container .second-conteiner main .link-search-div .link-search:hover {
+  filter: brightness(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.main-container footer {
+  background-color: #353535;
+}
+.main-container footer .footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  padding: 22px 25px;
+}
+@media (min-width: 768px) {
+  .main-container footer .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 80px;
+    padding: 30px 25px;
+  }
+}
+.main-container footer .footer-content h2 {
+  font-family: "Shrikhand";
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0;
+  color: white;
+}
+.main-container footer .footer-content ul {
+  display: grid;
+  gap: 7px;
+  list-style: none;
+  padding-inline-start: 0;
+}
+@media (min-width: 768px) {
+  .main-container footer .footer-content ul {
+    display: flex;
+    gap: 15px;
+  }
+}
+.main-container footer .footer-content ul a {
+  color: white;
+}/*# sourceMappingURL=Restaurant.css.map */

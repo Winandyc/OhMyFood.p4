@@ -4,6 +4,23 @@
     margin: 0;
 }
 
+.cards {
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-name: appear;
+
+    &.delay0 {
+        animation-delay: 0s;
+    }
+    &.delay1 {
+        animation-delay: 1s;
+    }
+    &.delay2 {
+        animation-delay: 2s;
+    }
+}
+
 @keyframes appear {
     0% {
         opacity: 0;
@@ -17,23 +34,6 @@
         opacity: 1;
         left: 0px;
     }
-}
-
-.cards {
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: 1;
-    animation-name: appear;
-}
-
-.delay0 {
-    animation-delay: -1.2s;
-}
-.delay1 {
-    animation-delay: -1s;
-}
-.delay2 {
-    animation-delay: -.8s;
 }
 
 body > svg {
@@ -113,6 +113,22 @@ body > svg {
                         font-size: 28px;
                     }
 
+                    svg {
+                        stroke: #000;
+                        stroke-width: 1px;
+                        fill: #fff;
+                        position: absolute;
+                        width: 22px;
+                        height: 22px;
+                        top: 42px;
+                        cursor: pointer;
+                        z-index: 1;
+
+                        @media (max-width: $breakPointL) {
+                            right: 22px;
+                        }
+                    }
+
                     .heart-icons {
                         svg {
                             stroke: #000;
@@ -122,21 +138,23 @@ body > svg {
                             position: absolute;
                             width: 22px;
                             height: 22px;
-                            top: 42px;
+                            bottom: 31px;
+                            right: 22px;
                             cursor: pointer;
-
-                            @media (max-width: $breakPointL) {
-                                right: 22px;
-                            }
                         }
 
-                        &:active {
+                        &:hover {
                             svg {
                                 fill: url(#heart-gradient);
                                 stroke: url(#heart-gradient);
-                                animation-delay: 250ms;
                             }
                         }
+                    }
+                }
+
+                @keyframes fillHeart {
+                    to {
+                        background-position: -100% 0;
                     }
                 }
             }
@@ -204,6 +222,9 @@ body > svg {
                     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
                     border-radius: 15.0431px;
                     overflow: hidden;
+                    @media (min-width: $breakPointL) {
+                        width: 50vw;
+                    }
                 }
 
                 .meal-item:hover .meal-item-animate {
@@ -231,6 +252,7 @@ body > svg {
                 .meal-content .title {
                     padding: 0 0 0 0;
                     margin: 0 0 0 0;
+                    font-family: "Roboto";
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 21px;
@@ -249,6 +271,7 @@ body > svg {
 
                 .meal-item .addendum {
                     font-weight: 300;
+                    font-family: "Roboto";
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
@@ -257,6 +280,7 @@ body > svg {
 
                 .meal-item .price {
                     font-weight: 700;
+                    font-family: "Roboto";
                 }
 
                 .select-button {

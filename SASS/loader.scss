@@ -45,7 +45,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 1;
-  animation: hidden 0s forwards; // LOADER ICI 4SEC A REMETTRE
+  animation: hidden 4s forwards; // Temps d'animation
   @keyframes hidden {
     from {
       display: flex;

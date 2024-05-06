@@ -16,12 +16,11 @@
 </head>
 
 <body> <!-- DEBUT -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <defs>
-            <linearGradient id="heart-gradient" x2="0" y2="1">
-                <stop offset="0" stop-color="#9356dc" />
-                <stop offset="1" stop-color="#ff79da" />
-            </linearGradient>
+            <mask id="heart-mask" maskContentUnits="objectBoundingBox">
+                <path d="M0 0.6 L0.5 0 L1 0.6 L0.5 1 Z" fill="white" />
+            </mask>
         </defs>
     </svg>
     <div class="main-container">
