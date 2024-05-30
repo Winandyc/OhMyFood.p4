@@ -3,7 +3,7 @@
 }
 
 .cards {
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-name: appear;
@@ -12,24 +12,20 @@
   animation-delay: 0s;
 }
 .cards.delay1 {
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 .cards.delay2 {
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 @keyframes appear {
   0% {
     opacity: 0;
-    left: 34px;
-  }
-  75% {
-    opacity: 0;
-    left: 34px;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    left: 0px;
+    transform: translateY(0);
   }
 }
 body > svg {
